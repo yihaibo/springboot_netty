@@ -48,7 +48,7 @@ public class NettyClient {
             bootstrap.handler(new NettyClientInitializer());
             Channel channel = bootstrap.connect(host, port).sync().channel();
             // 发送json字符串
-            String msg = "{\"name\":\"admin\",\"age\":27}\n";
+            String msg = "{\"name\":\"zhangsan\",\"code\":20189976,\"address\":浪漫的土耳其}\n";
             channel.writeAndFlush(msg);
             channel.closeFuture().sync();
         } catch (Exception e) {
